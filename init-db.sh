@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-EOSQL
+    CREATE DATABASE messager_users;
+    CREATE DATABASE messager_messages;
+    GRANT ALL PRIVILEGES ON DATABASE messager_users TO messager;
+    GRANT ALL PRIVILEGES ON DATABASE messager_messages TO messager;
+EOSQL

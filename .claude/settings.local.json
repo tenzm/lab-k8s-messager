@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(chmod +x *)",
+      "Bash(go get *)",
+      "Bash(go build *)",
+      "Bash(go version *)",
+      "Bash(GOTOOLCHAIN=local go version *)",
+      "Bash(python3 *)",
+      "Bash(GOTOOLCHAIN=local go build ./...)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(docker build *)",
+      "Bash(docker compose *)",
+      "Bash(curl *)"
+    ]
+  }
+}
